@@ -1,4 +1,4 @@
-# End Point 1: Get all available shoes
+# <span style="color: yellow;">End Point 1: Get all available shoes</span>
 
 
 *Request:*
@@ -56,8 +56,7 @@ Headers:
     }
 ]
 ```
-
-# End Point 2: Get shoe by ID
+# <span style="color: yellow;">End Point 2: Get shoe by ID</span>
 
 ***Request:
 GET /api/shoes/{id}
@@ -80,7 +79,7 @@ Status Code: 200 OK
     "availability": "In Stock"
 }
 ```
-
+**XML**
 ```XML
 <product>
     <id>0011</id>
@@ -92,9 +91,7 @@ Status Code: 200 OK
 </product>
 ```
 
-
-
-# End Point 3: Add a new shoe
+# <span style="color: yellow;">End Point 3: Add a new shoe</span>
 
 *Request:*
 **POST /api/shoes/brand/Adidas** 
@@ -103,6 +100,28 @@ Headers:
 
     Accept: application/json
     Accept: application/xml
+
+**BODY (JSON)**
+~~~JSON
+{
+    "name": "Puma RS-X",
+    "brand": "Puma",
+    "category": "Lifestyle",
+    "price": "PHP 7,000",
+    "availability": "In Stock"
+}
+~~~
+
+**BODY (XML)**
+~~~XML
+<product>
+    <name>Puma RS-X</name>
+    <brand>Puma</brand>
+    <category>Lifestyle</category>
+    <price>PHP 7,000</price>
+    <availability>In Stock</availability>
+</product>
+~~~
 
 *Response:*
 **Status Code: 200 OK**
@@ -128,10 +147,7 @@ Headers:
 </product>
 ~~~
 
-
-# End Point 4: Update shoe details
-*Response:*
-**Status Code: 201 Created**
+# <span style="color: yellow;">End Point 4: Update shoe details</span>
 
 Request:
 **PUT /api/shoes/{id}**
@@ -140,6 +156,24 @@ Headers:
 
     Accept: application/json
     Accept: application/xml
+
+**BODY(JSON)**
+~~~JSON
+{
+    "price": "PHP 5,800",
+    "availability": "Out of Stock"
+}
+~~~
+**BODY(XML)**
+~~~XML
+<product>
+    <price>PHP 5,800</price>
+    <availability>Out of Stock</availability>
+</product>
+~~~
+
+*Response:*
+**Status Code: 201 Created**
 
 **JSON**
 ~~~JSON
@@ -156,8 +190,7 @@ Headers:
 </product>
 ~~~
 
-
-# End Point 5: Delete a shoe by ID
+# <span style="color: yellow;">End Point 5: Delete a shoe by ID</span>
 
 *Request:*
 **DELETE /api/shoes/{id}**
@@ -180,8 +213,7 @@ Headers:
 ~~~XML
 <message>Product deleted successfully</message>
 ~~~
-
-# End Point 6: Get all in-stock shoes
+# <span style="color: yellow;">End Point 6: Get all in-stock shoes</span>
 
 *Request:*
 **GET /api/shoes/instock**
@@ -245,8 +277,8 @@ Headers:
 </products>
 ~~~
 
+# <span style="color: yellow;">End Point 7: Get all shoes within a price range</span>
 
-# End Point 7: Get all shoes within a price range
 
 *Request:*
 **GET /api/shoes/price**
@@ -303,8 +335,7 @@ Headers:
 </products>
 ~~~
 
-
-# End Point 8: Search shoes by brand
+# <span style="color: yellow;">End Point 8: Search shoes by brand</span>
 
 *Request:*
 **GET /api/shoes/brand/Nike**
@@ -342,8 +373,7 @@ Headers:
     </product>
 </products>
 ~~~
-
-# End Point 9: Delete shoes by brand
+# <span style="color: yellow;">End Point 9: Delete shoes by brand</span>
 
 *Request:*
 **DELETE /api/shoes/brand**
@@ -405,8 +435,7 @@ Headers:
     </remainingShoes>
 </response>
 ~~~
-
-# End Point 10: Get shoes by brand
+# <span style="color: yellow;">End Point 10: Get shoes by brand</span>
 
 *Request:*
 **GET /api/shoes/brand/Adidas** 
@@ -453,7 +482,8 @@ Headers:
     </shoes>
 </response>
 ~~~
-# End Point 11: Update shoes by brand
+
+# <span style="color: yellow;">End Point 11: Update shoes by brand</span>
 
 *Request:*
 **PUT /api/shoes/brand/Nike**
@@ -462,6 +492,26 @@ Headers:
 
     Accept: application/json
     Accept: application/xml
+
+**BODY(JSON)**
+~~~JSON
+{
+    "price": "PHP 8,000",
+    "availability": "Out of Stock"
+}
+~~~
+
+**BODY(XML)**
+~~~xml
+<product>
+    <price>PHP 8,000</price>
+    <availability>Out of Stock</availability>
+</product>
+~~~
+
+*Ressponse:*
+**Status Code: 200 OK**
+
 
 ***JSON:***
 ~~~JSON
